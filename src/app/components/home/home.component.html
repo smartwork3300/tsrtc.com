@@ -1,0 +1,46 @@
+<div class="container-fluid home" style="background-image: url(assets/images/home-bg.png)" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card bg-white p-4 ">
+
+                    <img src="assets/images/homeform-logo.png" alt="image" width="auto" height="auto">
+                   
+                    <div class="field mt-5 ">
+                        <label for="firstname1">Agent Id</label>
+                        <input id="firstname1" type="text" class="inputfield w-full  h-2rem outline-none">
+                    </div>
+                    <div class="field">
+                        <label for="lastname1">Password</label>
+                        <input id="lastname1" type="password" class="inputfield w-full h-2rem outline-none">
+                    </div>
+
+
+                    
+                    <p-dropdown [options]="cities"  placeholder="Select User Type" optionLabel="name"autoWidth="false"  
+        ></p-dropdown> 
+
+        <p-button label="Sign in" ></p-button>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+
+            </div>
+            <div class="col-md-4 next">
+                <p-button  routerLink='/consignment' label="Next Page"  ></p-button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+  </div>
+
+  

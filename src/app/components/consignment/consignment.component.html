@@ -1,0 +1,164 @@
+<div class="container-fluid p-0">
+    <img src="assets/images/rtc.jpg"   alt="Image" class="img-fluid mb-8 " >
+  </div>
+
+ <div class="container">
+     <div class="row">
+         <div class="col-md-6">
+            <div>
+                <label >Depo/Bus Station</label>
+                <p-dropdown [options]="cities"  placeholder="Select Depo/Bus Station" optionLabel="name"autoWidth="false"  
+                ></p-dropdown> 
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div>
+                <label >Region</label>
+                <p-dropdown [options]="cities"  placeholder="Select Region" optionLabel="name"autoWidth="false"  
+                    ></p-dropdown> 
+               </div>
+         </div>
+     </div>
+
+     <div class="row">
+         <div class="col-md-6">
+            <label >Date</label>
+            <p-calendar  [showIcon]="true" inputId="icon"></p-calendar>
+         </div>
+     </div>
+
+     <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label >Consignment Description</label>
+                  <textarea rows="3" cols="31" pInputTextarea class="outline-none"></textarea>
+                     </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label >From</label>
+                <p-dropdown [options]="cities"  placeholder="Select Place" optionLabel="name"autoWidth="false"  
+                    ></p-dropdown> 
+               </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <label >To</label>
+                <p-dropdown [options]="cities"  placeholder="Select Place" optionLabel="name"autoWidth="false"  
+                    ></p-dropdown> 
+               </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label >Consignment Type</label>
+                <p-dropdown [options]="cities"  placeholder="Select Consignment Type" optionLabel="name"autoWidth="false"  
+                    ></p-dropdown> 
+               </div>
+        </div>
+    <div class="col-md-6">
+        <div>
+            <label >Volume</label>
+            <p-dropdown [options]="cities"  placeholder="Select Volume" optionLabel="name"autoWidth="false"  
+                ></p-dropdown> 
+           </div>
+    </div>
+
+      </div>
+
+      <div class="row">
+          <div class="col-md-6">
+            <div>
+                <label>Consignee Name</label>
+                <input type="text" pInputText class="h-2rem" > 
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+                <label>Contact </label>
+                <p-inputNumber ></p-inputNumber>
+            </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div>
+              <label>Receiver Name</label>
+              <input type="text" pInputText class="h-2rem" > 
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+              <label>Contact</label>
+              <p-inputNumber ></p-inputNumber>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label >Receiver Address</label>
+                  <textarea rows="3" cols="31" pInputTextarea class="outline-none"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label>Booked By<br>(Agent Name)</label>
+                <input type="text" pInputText class="h-2rem" > 
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <label>Contact</label>
+                <p-inputNumber ></p-inputNumber>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="row">
+        <div class="col-3">
+            <button pButton pRipple type="button" label="Booking Cargo" class="p-button-rounded p-button-primary"></button>
+
+        </div>
+        <div class="col-3">
+
+        </div>
+        <div class="col-3">
+            <button pButton pRipple type="button" label="Submit" class="p-button-rounded p-button-success"></button> 
+
+        </div>
+        <div class="col-3">
+
+        </div>
+
+    </div>
+
+
+
+
+
+ </div>
+
+
+ <div class="container">
+    <div class="row">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-4 next">
+            <p-button  routerLink='/dispatchcargo' label="Next Page"  ></p-button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
