@@ -14,8 +14,9 @@ export class ConsignmentComponent implements OnInit {
 
   constructor() {
     this.cities = [
-      {name: 'RTC Agent', code: 'NY'},
-      {name: 'Private Agent', code: 'RM'}
+      {name: 'Sircilla', code: 'RM'},
+      {name: 'Secunderabad', code: 'NY'},
+      {name:'Karimnagar' ,code:'KNR'}
       
   ];
    }
