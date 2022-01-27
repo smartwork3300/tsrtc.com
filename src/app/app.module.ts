@@ -20,6 +20,8 @@ import { ConsignmentComponent } from './components/consignment/consignment.compo
 import { DispatchcargoComponent } from './components/dispatchcargo/dispatchcargo.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { CreatemanifestComponent } from './components/createmanifest/createmanifest.component';
+import { OutdeliveryComponent } from './components/outdelivery/outdelivery.component';
 
 const allImports=[
   ButtonModule,
@@ -39,7 +41,9 @@ const allImports=[
     ConsignmentComponent,
     DispatchcargoComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CreatemanifestComponent,
+    OutdeliveryComponent
   ],
   imports: [
     BrowserModule,

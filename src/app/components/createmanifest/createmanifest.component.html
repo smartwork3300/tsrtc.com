@@ -1,0 +1,146 @@
+<div class="container-fluid p-0">
+    <img src="assets/images/rtc.jpg"   alt="Image" class="img-fluid mb-8 " >
+  </div>
+
+ <div class="container">
+     <div class="row">
+         <div class="col-md-6">
+            <div>
+                <label>Mainfest Id</label>
+                <p-inputNumber ></p-inputNumber>
+            </div>
+         </div>
+         <div class="col-md-6">
+            
+         </div>
+     </div>
+
+     <div class="row">
+         <div class="col-md-6">
+            <label >Date</label>
+            <p-calendar  [showIcon]="true" inputId="icon"></p-calendar>
+         </div>
+         <div class="col-md-6">
+            <div>
+                <label>Bus Number</label>
+                <input type="text" pInputText class="h-2rem" > 
+            </div>
+         </div>
+     </div>
+
+     
+
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label >Depo</label>
+                <p-dropdown [options]="cities"  placeholder="Select Depo" optionLabel="name"autoWidth="false"  
+                    ></p-dropdown> 
+               </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <label >From</label>
+                <p-dropdown [options]="cities"  placeholder="Select From" optionLabel="name"autoWidth="false"  
+                    ></p-dropdown> 
+               </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label >To</label>
+                <p-dropdown [options]="cities"  placeholder="Select To" optionLabel="name"autoWidth="false"  
+                    ></p-dropdown> 
+               </div>
+        </div>
+    <div class="col-md-6">
+        
+    </div>
+
+      </div>
+
+      <div class="row">
+          <div class="col-md-6">
+            <div>
+                <label>Total Packages</label>
+                <p-inputNumber ></p-inputNumber>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div>
+                <label>Actual Weight</label>
+                <p-inputNumber ></p-inputNumber>
+            </div>
+          </div>
+      </div>
+
+      <div class="row">
+        
+        <div class="col-md-6">
+          <div>
+              <label>Crew Charges</label>
+              <p-inputNumber ></p-inputNumber>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <label>Driver/Conductor Name</label>
+                <input type="text" pInputText class="h-2rem" > 
+            </div>
+          </div>
+    </div>
+
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label>Agent Id</label>
+                <p-inputNumber ></p-inputNumber> 
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                <label>Agent Contact</label>
+                <p-inputNumber ></p-inputNumber>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="row">
+        <div class="col-md-5">
+            
+
+        </div>
+        <div class="col-md-3">
+            <button pButton pRipple type="button" label="Submit" class="p-button-rounded p-button-success"></button> 
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        
+
+    </div>
+
+
+
+
+
+ </div>
+
+
+ <div class="container">
+    <div class="row">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-4 next">
+            <p-button  routerLink='/dispatchcargo' label="Next Page"  ></p-button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
