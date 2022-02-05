@@ -2,82 +2,94 @@
     <img src="assets/images/rtc.jpg"   alt="Image" class="img-fluid mb-8 " >
   </div>
 
-  <div class="container">
+  <form [formGroup]="outDelForm" #form="ngForm">
+    <div class="container">
     
 
-    <div class="row">
-        <div class="col-md-6">
-            <div>
-                <label>Consignment Id</label>
-                <p-inputNumber [useGrouping]="false"></p-inputNumber>
-            </div>
-        </div>
-        <div class="col-md-6">
-            
-        </div>
-    </div>
-
-
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <label>Consignment Id</label>
+                    <p-inputNumber formControlName="consignId" [useGrouping]="false"></p-inputNumber>
     
-
-    <div class="row">
+                    <div *ngIf="(consignId && consignId.invalid && consignId.touched) || (consignId && consignId.invalid && form.submitted)" class="text-danger text-center">Consignment Id is required</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+    
+    
         
-
-        <div class="col-md-6">
-            <div>
-                <label>Receiver Name</label>
-                <input type="text" pInputText class="h-2rem" > 
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div>
-                <label>Receiver Contact Number</label>
-                <p-inputNumber [useGrouping]="false"></p-inputNumber>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div>
-                <label >Receiver Address</label>
-                  <textarea rows="3" cols="31" pInputTextarea class="outline-none"></textarea>
-                     </div>
-        </div>
-        <div class="col-md-6">
-            <div>
-                <label>Assign Person Name</label>
-                <input type="text" pInputText class="h-2rem" > 
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        
-
-        <div class="col-md-6">
-            <div>
-                <label>Assign Person Contact Number</label>
-                <p-inputNumber [useGrouping]="false" ></p-inputNumber>
-            </div>
-        </div>
-        <div class="col-md-6">
+    
+        <div class="row">
             
+    
+            <div class="col-md-6">
+                <div>
+                    <label>Receiver Name</label>
+                    <input type="text" formControlName="receiverName"pInputText class="h-2rem" > 
+
+                    <div *ngIf="(receiverName && receiverName.invalid && receiverName.touched) || (receiverName && receiverName.invalid && form.submitted)" class="text-danger text-center">Receiver name is required</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <label>Receiver Contact Number</label>
+                    <p-inputNumber formControlName="receiverNo" [useGrouping]="false"></p-inputNumber>
+                    <div *ngIf="(receiverNo && receiverNo.invalid && receiverNo.touched) || (receiverNo && receiverNo.invalid && form.submitted)" class="text-danger text-center">Contact number is required</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <label >Receiver Address</label>
+                      <textarea rows="3" formControlName="receiverAddress" cols="31" pInputTextarea class="outline-none"></textarea>
+                         
+                      <div *ngIf="(receiverAddress && receiverAddress.invalid && receiverAddress.touched) || (receiverAddress && receiverAddress.invalid && form.submitted)" class="text-danger text-center">Receiver address is required</div>
+                    </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <label>Assign Person Name</label>
+                    <input type="text" formControlName="assignPersonName" pInputText class="h-2rem" > 
+
+                    <div *ngIf="(assignPersonName && assignPersonName.invalid && assignPersonName.touched) || (assignPersonName && assignPersonName.invalid && form.submitted)" class="text-danger text-center">Name is required</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            
+    
+            <div class="col-md-6">
+                <div>
+                    <label>Assign Person Contact Number</label>
+                    <p-inputNumber formControlName="assignPersonNo" [useGrouping]="false" ></p-inputNumber>
+                    <div *ngIf="(assignPersonNo && assignPersonNo.invalid && assignPersonNo.touched) || (assignPersonNo && assignPersonNo.invalid && form.submitted)" class="text-danger text-center">Contact number is required</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+    
+    
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-3">
+                <button pButton pRipple type="submit" label="Submit" class="p-button-rounded p-button-success"></button> 
+    
+            </div>
+            <div class="col-md-4">
+    
+            </div>
         </div>
     </div>
-
-
-    <div class="row">
-        <div class="col-md-5"></div>
-        <div class="col-md-3">
-            <button pButton pRipple type="button" label="Submit" class="p-button-rounded p-button-success"></button> 
-
-        </div>
-        <div class="col-md-4">
-
-        </div>
-    </div>
-</div>
+  </form>
 
 <div class="container">
     <div class="row">

@@ -6,22 +6,45 @@
                 <div class="card bg-white p-4 ">
 
                     <img src="assets/images/homeform-logo.png" alt="image" width="auto" height="auto">
+
+
                    
-                    <div class="field mt-5 ">
-                        <label for="firstname1">Agent Id</label>
-                        <input id="firstname1" type="text" class="inputfield w-full  h-2rem outline-none">
-                    </div>
-                    <div class="field">
-                        <label for="lastname1">Password</label>
-                        <input id="lastname1" type="password" class="inputfield w-full h-2rem outline-none">
-                    </div>
+                    <form [formGroup]="signForm" #form="ngForm">
+
+                        <div class="field mt-5 ">
+                            <label >Agent Id</label>
+                            <input formControlName="agentId" type="text" class="inputfield w-full  h-2rem outline-none">
+
+                             <small *ngIf="(agentId && agentId.invalid && agentId.touched) || (agentId && agentId.invalid && form.submitted)" class="text-danger">Agent Id is required</small>
+
+                        </div>
+                        <div class="field">
+                            <label >Password</label>
+                            <input formControlName="password" type="password" class="inputfield w-full h-2rem outline-none">
+
+                            <div *ngIf="(password && password.invalid && password.touched) || (password && password.invalid && form.submitted)">
+                           
+                                <small *ngIf="password.errors?.['required']" class="text-danger">Password is required</small>
+                                    <small *ngIf="password.errors?.['minlength']" class="text-danger">Password must be 5 characters</small>
+                               </div>
+                        
+                        
+                        
+                        </div>
+    
+    
+                        
+                        <p-dropdown [options]="cities" formControlName="userType"  placeholder="Select User Type" optionLabel="name"autoWidth="false"  
+            ></p-dropdown> 
+            
+            <div *ngIf="(userType && userType.invalid && userType.touched) || (userType && userType.invalid && form.submitted)" class="text-danger">
+                Usertype is required
+            </div>
+    
+            <p-button type="submit" label="Sign in" ></p-button>
+                    </form>
 
 
-                    
-                    <p-dropdown [options]="cities"  placeholder="Select User Type" optionLabel="name"autoWidth="false"  
-        ></p-dropdown> 
-
-        <p-button label="Sign in" ></p-button>
                 </div>
             </div>
             <div class="col-md-4"></div>

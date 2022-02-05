@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder ,Validators} from '@angular/forms';
+
+
 interface City {
   name: string,
   code: string
@@ -12,7 +15,7 @@ interface City {
 export class HomeComponent implements OnInit {
   cities:City[];
 
-  constructor() { 
+  constructor(private fb:FormBuilder) { 
     this.cities = [
       {name: 'RTC Agent', code: 'NY'},
       {name: 'Private Agent', code: 'RM'}
@@ -20,6 +23,23 @@ export class HomeComponent implements OnInit {
   ];
   }
 
+signForm=this.fb.group({
+
+  agentId:[null,[Validators.required]],
+  password:[null,[Validators.required,Validators.minLength(5)]],
+  userType:[null,[Validators.required]]
+})
+
+
+get agentId(){
+  return this.signForm.get('agentId');
+}
+get password(){
+  return this.signForm.get('password');
+}
+get userType(){
+  return this.signForm.get('userType');
+}
   ngOnInit(): void {
   }
 
