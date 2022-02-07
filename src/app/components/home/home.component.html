@@ -15,9 +15,20 @@
                             <label >Agent Id</label>
                             <input formControlName="agentId" type="text" class="inputfield w-full  h-2rem outline-none">
 
-                             <small *ngIf="(agentId && agentId.invalid && agentId.touched) || (agentId && agentId.invalid && form.submitted)" class="text-danger">Agent Id is required</small>
+                             <!-- <small *ngIf="(agentId && agentId.invalid && agentId.touched) || (agentId && agentId.invalid && form.submitted)" class="text-danger">Agent Id is required</small> -->
 
-                        </div>
+
+                             <div *ngIf="agentId && agentId.invalid && agentId.touched">
+                                <small *ngIf="agentId.errors?.['required']" class="text-danger">userName is required</small>
+                                <small *ngIf="agentId.errors?.['pattern']" class="text-danger">enter your depo code in capital letters,then for RTC Agent enter 'RA' (or) for private agent enter 'PA' and then your id </small>
+
+
+                             </div>
+                            
+
+                        
+                        
+                            </div>
                         <div class="field">
                             <label >Password</label>
                             <input formControlName="password" type="password" class="inputfield w-full h-2rem outline-none">
@@ -25,7 +36,9 @@
                             <div *ngIf="(password && password.invalid && password.touched) || (password && password.invalid && form.submitted)">
                            
                                 <small *ngIf="password.errors?.['required']" class="text-danger">Password is required</small>
-                                    <small *ngIf="password.errors?.['minlength']" class="text-danger">Password must be 5 characters</small>
+                                    <small *ngIf="password.errors?.['minlength']" class="text-danger">Password must be 5 characters<br></small>
+                                    <small *ngIf="password.errors?.['maxlength']" class="text-danger">password must not be above 8 characters <br></small>
+                                    <small *ngIf="password.errors?.['pattern']" class="text-danger">password should contain (A-Z or a-z or 0-9 ) and one special character between(@,#,$,%,&,*)</small>
                                </div>
                         
                         
@@ -41,7 +54,7 @@
                 Usertype is required
             </div>
     
-            <p-button type="submit" label="Sign in" ></p-button>
+            <p-button  [disabled]="signForm.invalid" type="submit"  label="Sign in"  [routerLink]="signForm.valid ? ['/consignment'] : []"></p-button>
                     </form>
 
 
@@ -53,7 +66,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col-md-5">
 
@@ -64,6 +77,6 @@
             <div class="col-md-3"></div>
         </div>
     </div>
-  </div>
+  </div> -->
 
   
